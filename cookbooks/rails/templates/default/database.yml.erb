@@ -1,0 +1,6 @@
+production:
+  adapter:  mysql
+  username: <%= @node[:database][:user] %>
+  database: <%= @node[:database][:name] %>
+  password: <%= @node[:database][:password] %>
+  host:     <%= @node[:database][:host] %>

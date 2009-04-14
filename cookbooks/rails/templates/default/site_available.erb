@@ -1,0 +1,6 @@
+Listen <%= @port %>
+NameVirtualHost *:<%= @port %>
+
+<VirtualHost *:<%= @port %>>
+	DocumentRoot <%= @path %>
+</VirtualHost>

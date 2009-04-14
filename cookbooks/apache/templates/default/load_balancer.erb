@@ -1,0 +1,12 @@
+
+<VirtualHost *:80>
+	<Proxy balancer://mycluster>
+		<% @node[:apache][:application_servers].each do |server, port| -%>	
+			BalancerMember http://<%= server %>:<%= port %>
+		<% end -%>
+		Order allow,deny
+		Allow from all
+	</Proxy>
+	ProxyPass / balancer://mycluster
+</VirtualHost>
+
