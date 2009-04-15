@@ -11,7 +11,7 @@ package "apache2"
 
 service "apache2" do
   supports :restart => true
-  action :enable
+  action [ :enable, :start ]
 end
 
 # Configure apache as a load balancer
