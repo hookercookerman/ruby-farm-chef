@@ -2,7 +2,7 @@
 # Chef Server Config File
 #
 
-validation_token   ""
+validation_token   "replace_this"
 log_level          :info
 log_location       STDOUT
 ssl_verify_mode    :verify_none
